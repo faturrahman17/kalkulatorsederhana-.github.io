@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/boxicon/css/boxicons.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+</head>
+<body>
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg text-bg-dark">
+        <div class="container">
+          <a class="navbar-brand fw-bold text-bg-dark">Selamat Datang Di Halamanku</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-bg-dark" aria-current="page" href="home.html">JTIK</a>
+              </li>
+              <li class="nav-item text-">
+                <a class="nav-link text-bg-dark" href="about_me.html">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-bg-dark" href="pendidikan.html">Pendidikan</a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-bg-dark" href="jadwalkuliah.html">Jadwal Kuliah</a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-bg-dark" href="buku_tamu.html">Buku Tamu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-bg-dark" href="javascript.html">Javascript</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-bg-dark" href="kalkulator.html">Kalkulator</a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-bg-dark" href="contact.html">Kontak</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+<h2>Menghitung Luas Persegi Panjang</h2>
+<button onclick="hitungLuas()">Hitung Luas</button>
+
+<p id="luasPersegiPanjang"></p>
+
+<h2>Memeriksa Angka Positif, Negatif, atau Nol</h2>
+<input type="number" id="angka" placeholder="Masukkan angka">
+<button onclick="cekAngka()">Cek</button>
+
+<p id="hasilPengecekan"></p>
+
+<script>
+    function hitungLuas() {
+        var panjang = parseFloat(prompt("Masukkan panjang persegi panjang:"));
+        var lebar = parseFloat(prompt("Masukkan lebar persegi panjang:"));
+        var luas = panjang * lebar;
+        document.getElementById("luasPersegiPanjang").innerHTML = "Luas Persegi Panjang adalah: " + luas;
+    }
+
+    function cekAngka() {
+        var angka = parseFloat(document.getElementById("angka").value);
+        var pesan = "";
+
+        if (angka > 0) {
+            pesan = "Angka ini adalah positif.";
+        } else if (angka < 0) {
+            pesan = "Angka ini adalah negatif.";
+        } else {
+            pesan = "Angka ini adalah nol.";
+        }
+
+        document.getElementById("hasilPengecekan").innerHTML = pesan;
+    }
+</script>
